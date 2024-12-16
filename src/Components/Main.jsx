@@ -1,20 +1,10 @@
-import { useState } from "react";
-import { useMovieDatas } from "../Contexts/GlobalContext";
+import { useContext, useEffect, useState } from "react";
+import MoviesContext from "../Contexts/MovieContext";
 
 export default function Main() {
-  const [globalData, setGlobalData] = useState(useMovieDatas());
-  if (globalData) {
-    return (
-      <>
-        <h1 className="m-5">ciao</h1>
-      </>
-    );
-  }
-  if (!globalData) {
-    return (
-      <>
-        <h1 className="m-5">C'è</h1>
-      </>
-    );
-  }
+  const { moviesData } = useContext(MoviesContext);
+
+  if (moviesData.length == 0) return <h1>Effettua una ricerca </h1>;
+
+  return <h1 className="m-5">{moviesData[1].original_title}</h1>;
 }

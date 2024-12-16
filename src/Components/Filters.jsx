@@ -1,12 +1,13 @@
-import { useState } from "react";
-import { movieFetch } from "../Contexts/GlobalContext";
+import { useContext, useState } from "react";
+import MoviesContext from "../Contexts/MovieContext";
 
 export default function Filters() {
   const [titleSearch, setTitleSearch] = useState("");
 
+  const { movieFetch } = useContext(MoviesContext);
+
   const titleSearchChange = (event) => {
     setTitleSearch(event.target.value);
-    console.log(event.target.value);
   };
 
   return (

@@ -1,14 +1,14 @@
-import { MovieDatasProvider } from "./Contexts/GlobalContext";
+import { MoviesDataProvider } from "./MoviesDataProvider";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
 
 function App() {
   return (
     <>
-      <MovieDatasProvider>
+      <MoviesDataProvider>
         <Header></Header>
         <Main></Main>
-      </MovieDatasProvider>
+      </MoviesDataProvider>
     </>
   );
 }
