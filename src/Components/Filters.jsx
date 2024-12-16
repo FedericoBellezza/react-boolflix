@@ -1,4 +1,14 @@
+import { useState } from "react";
+import { movieFetch } from "../Contexts/GlobalContext";
+
 export default function Filters() {
+  const [titleSearch, setTitleSearch] = useState("");
+
+  const titleSearchChange = (event) => {
+    setTitleSearch(event.target.value);
+    console.log(event.target.value);
+  };
+
   return (
     <>
       <div>
@@ -8,8 +18,18 @@ export default function Filters() {
           <option value="mercedes">Mercedes</option>
           <option value="audi">Audi</option>
         </select>
-        <input type="text" className="me-1"></input>
-        <button className="me-5 text-bg-danger">Search</button>
+        <input
+          onChange={titleSearchChange}
+          type="text"
+          value={titleSearch}
+          className="me-1"
+        ></input>
+        <button
+          onClick={() => movieFetch(titleSearch)}
+          className="me-5 text-bg-danger"
+        >
+          Search
+        </button>
       </div>
     </>
   );
