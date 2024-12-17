@@ -8,6 +8,7 @@ export const MoviesDataProvider = ({ children }) => {
   const [isLoading, setIsLoading] = useState(false);
 
   const movieFetch = (titleSearch) => {
+    setIsLoading(true);
     event.preventDefault();
     const movieUrl = `https://api.themoviedb.org/3/search/movie?query=${titleSearch}`;
     const serieUrl = `https://api.themoviedb.org/3/search/tv?query=${titleSearch}`;
@@ -23,7 +24,6 @@ export const MoviesDataProvider = ({ children }) => {
 
     //-  movie fetch
     fetch(movieUrl, options)
-      .then(setIsLoading(true))
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
