@@ -26,7 +26,6 @@ export const MoviesDataProvider = ({ children }) => {
     fetch(movieUrl, options)
       .then((res) => res.json())
       .then((data) => {
-        setIsLoading(false);
         const NormalizeData = data.results.map((movie) => {
           const {
             id,
@@ -79,7 +78,8 @@ export const MoviesDataProvider = ({ children }) => {
         setSeriesData(NormalizeData);
         console.log("Series:", NormalizeData);
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error(err))
+      .finally(() => setIsLoading(false));
   };
 
   return (
