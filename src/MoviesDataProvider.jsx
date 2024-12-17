@@ -20,6 +20,7 @@ export const MoviesDataProvider = ({ children }) => {
       .then((res) => res.json())
       .then((data) => {
         setMoviesData(data.results);
+        console.log(data.results);
       })
       .catch((err) => console.error(err));
   };
