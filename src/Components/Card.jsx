@@ -11,7 +11,7 @@ export default function Card(moviesOrSeries) {
     let vote = Math.ceil(movie.vote / 2);
 
     return (
-      <div key={movie.id} className="col-6">
+      <div key={movie.id} className="col-6 ">
         <div className="movie_container text-bg-dark p-3">
           <div className="p-3">
             <p>
@@ -111,10 +111,14 @@ export default function Card(moviesOrSeries) {
               </p>
             )}
 
-            <img
-              className="movie_poster"
-              src={`https://image.tmdb.org/t/p/w780${movie.img}`}
-            />
+            {movie.img ? (
+              <img
+                className="movie_poster"
+                src={`https://image.tmdb.org/t/p/w780${movie.img}`}
+              />
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </div>
