@@ -81,7 +81,7 @@ export default function Card(moviesOrSeries) {
               )}
               {vote == 4 ? (
                 <span>
-                  <i classname="fa-solid   fa-star"></i>
+                  <i className="fa-solid   fa-star"></i>
                   <i className="fa-solid   fa-star"></i>
                   <i className="fa-solid   fa-star"></i>
                   <i className="fa-solid   fa-star"></i>

@@ -1,17 +1,7 @@
 export default function Loader() {
-  <div className="text-bg-dark">
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-    <h1>Caricamento...</h1>
-  </div>;
+  return (
+    <div className="loader_container d-flex justify-content-center align-items-center  ">
+      <div class="loader"></div>
+    </div>
+  );
 }
