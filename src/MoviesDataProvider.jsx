@@ -36,6 +36,7 @@ export const MoviesDataProvider = ({ children }) => {
             backdrop_path,
             overview,
           } = movie;
+
           return {
             id,
             title,
