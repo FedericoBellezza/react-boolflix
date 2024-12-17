@@ -1,0 +1,21 @@
+.movie_poster {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s linear;
+}
+
+.movie_poster:hover {
+  opacity: 0;
+}
+
+.movie_container {
+  position: relative;
+  height: 360px;
+  overflow: auto;
+}
+::-webkit-scrollbar {
+  display: none;
+}

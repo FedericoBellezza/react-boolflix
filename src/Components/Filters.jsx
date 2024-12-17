@@ -12,13 +12,7 @@ export default function Filters() {
 
   return (
     <>
-      <div>
-        <select name="category" className="me-4" id="">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
+      <form onSubmit={() => movieFetch()}>
         <input
           onChange={titleSearchChange}
           type="text"
@@ -31,7 +25,7 @@ export default function Filters() {
         >
           Search
         </button>
-      </div>
+      </form>
     </>
   );
 }
